@@ -1,0 +1,18 @@
+pipeline{ 
+  agent none
+  stages{
+   stage('input'){
+    agent any
+    input{
+      message "what is your name?"
+      ok "submit"
+      parameters{
+       string(defaultValue:'Dave', name :'First_Name',trim:true)
+      }
+    }
+    steps{
+     echo "good morning, $First_Name"
+     }
+   }
+ }
+}
