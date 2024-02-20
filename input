@@ -11,7 +11,7 @@ Opipeline{
     }
   }
   steps{
-   echo ' hello ${PERSON}
+   echo ' hello ${PERSON}'
   }
 }
 }
