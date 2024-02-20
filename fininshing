@@ -1,22 +1,21 @@
 pipeline{
- agents any
- stages{
-   stage('Test'){
-     steps{
-       sh 'echo "Fail"; exit 1:'
-       }
-     }
-  }
-  Post{
-   always{
-     echo 'this will always run'
+  agents any
+  stages{
+    stage('Test'){
+      steps{
+        sh 'echo "Fail"; exit 1:'
+        }
+      }
    }
-   success{
-     echo 'this is passed'
+   Post{
+    always{
+      echo 'this will always run'
+    }
+    success{
+      echo 'this is passed'
+    }
+    failure{
+      echo 'this is a failure'
+    }
    }
-   failure{
-     echo 'this is failure'
-   }
-  }
-}  
-  
+ }    
