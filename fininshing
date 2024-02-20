@@ -7,7 +7,7 @@ pipeline{
         }
       }
    }
-   Post{
+   post{
     always{
       echo 'this will always run'
     }
