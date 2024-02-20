@@ -6,7 +6,7 @@ pipeline{
     message 'should we continue'
     ok 'yes we should'
     submitter 'manoj'
-    parameter{
+    parameters{
      string(name:'PERSON',defaultValue:'mr jenkins',description:'hello all this is desc')
     }
   }
