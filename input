@@ -1,4 +1,4 @@
-pipeline{ 
+Opipeline{ 
  agent any
  stages{
   stage('Example'){
@@ -7,11 +7,11 @@ pipeline{
     ok 'yes we should'
     submitter 'manoj'
     parameter{
-     string(name:'manoj',defaultValue:'mr jenkins',description:'hello all this is desc')
+     string(name:'PERSON',defaultValue:'mr jenkins',description:'hello all this is desc')
     }
   }
   steps{
-   echo ' hello ${manoj}
+   echo ' hello ${PERSON}
   }
 }
 }
