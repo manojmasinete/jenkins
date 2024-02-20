@@ -9,7 +9,6 @@ pipeline{
     stage('example deploy'){
       when{
         branch 'main'
-        environment name:'DEPLOY_TO', value:'main'
       }
       steps{
        echo 'deploying'
