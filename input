@@ -1,0 +1,18 @@
+pipeline{ 
+ agent any
+ stages{
+  stage('Example'){
+   input{ 
+    message 'should we continue'
+    ok 'yes we should'
+    submitter 'manoj'
+    parameter{
+     string(name:'manoj',defaultValue:'mr jenkins',description:'hello all this is desc')
+    }
+  }
+  steps{
+   echo ' hello ${manoj}
+  }
+}
+}
+}
