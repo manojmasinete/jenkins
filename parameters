@@ -2,7 +2,7 @@ pipeline{
  agent any
  parameters{
    string(name: 'PERSON', defaultValue:'Mr Jenkins',description:"the name of a person")
-   text(name:"Biography',defaultValue:'', description:'the text content')
+   text(name:"Biography",defaultValue:'',description:'the text content')
    choice(name:'Choice',defaultValue:['a','b','c'],description:'pick one from choices')
    password(name:'Password',defaultValue'SECRET',description: 'enter a password')
   }
